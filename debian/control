@@ -12,7 +12,7 @@ Build-Depends: debhelper-compat (= 13),
                python3-setuptools-rust,
                python3-wheel,
                bzip2,
-               rust,
+               rust-all,
                python3-build,
                python3-installer,
 Rules-Requires-Root: no
