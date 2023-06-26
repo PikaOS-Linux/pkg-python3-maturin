@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export PYBUILD_NAME=maturin
+
+build3vers := $(shell py3versions -sv)
+
+%:
+	dh $@ --with python3 --buildsystem pybuild

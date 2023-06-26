@@ -1,0 +1,26 @@
+Source: maturin
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Build-Depends: debhelper-compat (= 13),
+               pybuild-plugin-pyproject,
+               dh-python,
+               python3-all-dev,
+               python3-setuptools,
+               libyaml-dev (>= 0.2.2~),
+               cython3,
+               python3-setuptools-rust,
+               python3-wheel,
+               bzip2,
+               rust,
+               python3-build,
+               python3-installer,
+Rules-Requires-Root: no
+Standards-Version: 4.6.1
+Homepage: https://github.com/PyO3/maturin
+
+Package: python3-maturin
+Architecture: any
+Multi-Arch: allowed
+Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Description: Build and publish crates with pyo3, rust-cpython and cffi bindings
