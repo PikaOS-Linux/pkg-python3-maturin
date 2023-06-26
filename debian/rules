@@ -4,3 +4,7 @@
 	
 override_dh_auto_build:
 	cargo build --manifest-path Cargo.toml --message-format=json-render-diagnostics --release -v --no-default-features --locked
+override_dh_install:
+	dh_install
+	mkdir -p debian/python3-maturin/usr/bin
+	cp target/release/maturin debian/python3-maturin/usr/bin/
