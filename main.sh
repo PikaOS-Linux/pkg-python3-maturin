@@ -1,5 +1,5 @@
 # Clone Upstream
-git clone https://github.com/PyO3/maturin -b v1.1.0
+git clone https://github.com/PyO3/maturin -b v1.3.0
 cp -rvf ./debian ./maturin/
 cd ./maturin
 
